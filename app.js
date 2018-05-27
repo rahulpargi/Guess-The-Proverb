@@ -23,10 +23,10 @@ var proverbs=[
 var ran=proverbs[Math.floor((Math.random()*20))].replace(/\s[^a-zA-Z ]/g,'');
 var rp=ran.toString().toLowerCase();
 var guessCount=3;
-console.log(rp);
+//console.log(rp);
 var guess=Math.floor((ran.length)/2);
 var count=0;
-console.log(guess);
+console.log(rp);
 document.getElementById("guesss").innerHTML="Guesses Available: "+guess;
 document.getElementById("counts").innerHTML="Count is "+count;
 function display(a){
@@ -50,16 +50,21 @@ function display(a){
 //console.log(input);
 function check(){
     guessCount--;
+    console.log(count);
     if(guessCount==0){
-        alert("You cant guesses are over ");
+        alert("You guesses are over ");
         window.location.reload();
 
     }
+    
    var input  =document.getElementById("ip").value;
     console.log(input);
+    var len=ran.length-count;
     
     if(input==rp){
-        alert("You Guess was correct!");
+       console.log(guessCount);
+        alert("You are correct, You are "+len+" Star guesser!");
+ 
         window.location.reload();
         
         return false;
@@ -68,12 +73,15 @@ function check(){
         
         return false;
     }
+    
 }
 
 function giveUp(){
     window.location.reload();
 }
-   
+function reveal(){
+    document.getElementById("ans").innerHTML=rp;
+}
   
   
 
