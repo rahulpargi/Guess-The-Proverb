@@ -21,7 +21,7 @@ var proverbs=[
     "God helps those who help themselves"
 ]
 var ran=proverbs[Math.floor((Math.random()*20))].replace(/\s[^a-zA-Z ]/g,'');
-var rp=ran.toString();
+var rp=ran.toString().toLowerCase();
 var guessCount=3;
 console.log(rp);
 var guess=Math.floor((ran.length)/2);
@@ -37,7 +37,7 @@ function display(a){
     
     document.getElementById("counts").innerHTML="Count is "+count;
     if(count>guess){
-        alert("You Cannot Click More Enter Your Guess");
+        alert("You have no more letters to flip, please make you Guess Now!");
         return false;
       
     }else{
