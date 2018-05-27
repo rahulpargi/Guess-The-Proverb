@@ -70,7 +70,9 @@ function check(){
     }
 }
 
-   
+function giveUp(){
+    window.location.reload();
+}
    
   
   
