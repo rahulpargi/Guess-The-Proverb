@@ -33,7 +33,7 @@ function display(a){
     count++;
     var i=document.getElementById(a);
     i.innerHTML=ran[a-1];
-    i.style.backgroundColor="red";
+    i.style.backgroundColor="#29b6f6";
     
     document.getElementById("counts").innerHTML="Count is "+count;
     if(count>guess){
